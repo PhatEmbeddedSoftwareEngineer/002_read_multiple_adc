@@ -1,0 +1,141 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: HUYNH phat, no compapy, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  D:\KEILC_\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\luu_tru_stm32_thanh_ghi\multiple_adc\main.uvprojx
+Project File Date:  12/30/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'D:\KEILC_\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(1): warning: // comments are not allowed in this language [-Wcomment]
+#include "stm32f10x.h"                  // Device header
+                                        ^
+main.c(1): warning: In file included from...
+D:/KEILC_/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+D:/KEILC_/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+D:/KEILC_/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.c(4): warning: In file included from...
+./function_millis.h(1): warning: // comments are not allowed in this language [-Wcomment]
+#include "stm32f10x.h"                  // Device header
+                                        ^
+./function_millis.h(5): warning: typedef requires a name [-Wmissing-declarations]
+typedef struct Time{
+^~~~~~~
+main.c(5): warning: no previous extern declaration for non-static variable 'now' [-Wmissing-variable-declarations]
+unsigned long now=0;
+              ^
+main.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned long now=0;
+^
+main.c(9): warning: no previous prototype for function 'sendData' [-Wmissing-prototypes]
+void sendData(unsigned char c)
+     ^
+main.c(9): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void sendData(unsigned char c)
+^
+static 
+main.c(42): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
+                        analogValue=ADC1->DR;
+                                   ~~~~~~~^~
+main.c(58): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
+                        analogValueTwo=ADC1->DR;
+                                      ~~~~~~~^~
+main.c(74): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
+                        analogValueThree=ADC1->DR;
+                                        ~~~~~~~^~
+main.c(44): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+                        int a=0;
+                            ^
+main.c(89): warning: no newline at end of file [-Wnewline-eof]
+// sensor analogvalueThree has sensor read analog 
+                                                  ^
+main.c(7): warning: no previous extern declaration for non-static variable 'buffer' [-Wmissing-variable-declarations]
+char buffer[1000];
+     ^
+main.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char buffer[1000];
+^
+main.c(8): warning: no previous extern declaration for non-static variable 'analogValue' [-Wmissing-variable-declarations]
+int analogValue,analogValueTwo,analogValueThree;
+    ^
+main.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int analogValue,analogValueTwo,analogValueThree;
+^
+main.c(8): warning: no previous extern declaration for non-static variable 'analogValueTwo' [-Wmissing-variable-declarations]
+int analogValue,analogValueTwo,analogValueThree;
+                ^
+main.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int analogValue,analogValueTwo,analogValueThree;
+^
+main.c(8): warning: no previous extern declaration for non-static variable 'analogValueThree' [-Wmissing-variable-declarations]
+int analogValue,analogValueTwo,analogValueThree;
+                               ^
+main.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int analogValue,analogValueTwo,analogValueThree;
+^
+17 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=8792 RO-data=896 RW-data=4 ZI-data=2656  
+FromELF: creating hex file...
+".\Objects\main.axf" - 0 Error(s), 17 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  D:/KEILC_/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/KEILC_/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
